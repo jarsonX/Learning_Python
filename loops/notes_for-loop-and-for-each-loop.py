@@ -1,3 +1,7 @@
+#################################################
+# For loop and For each loop 
+#################################################
+
 #For loop--------------------------
 
 #for i in range(len(the_variable)):
@@ -36,3 +40,17 @@ for x in mystery_string:
 # 3 s
 # 4 o
 # 5 n
+
+#################################################
+#Enumerate
+#################################################
+
+squares = ["red", "yellow", "green"] 
+
+for i, square in enumerate(squares): 
+print(i, square)
+
+#0 red
+#1 yellow
+#2 green
+
