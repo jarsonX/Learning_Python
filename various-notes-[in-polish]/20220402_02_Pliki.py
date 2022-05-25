@@ -260,22 +260,188 @@ def print_counter(counter):
 
 letters_count_distinct(r"C:\Users\krzys\Desktop\UE\Python\Kody z zajęć\test")
     
+#_________________________________________________________________
+
+# -*- coding: utf-8 -*-
+
+#####
+lan = "    Ala ma kota   "
+#szukana = "a"
+#if szukana in lan:
+#    print(lan.index(szukana)) # szukana musi istnieić, inaczej będzie błąd
+
+#####
+#" ".join(...)
+
+#####
+#lista = lan.split() # dzieli lan wzflędem parametru (jesli nie ma, to biale znaki) zwraca listę elementow
+#print(lista)
+#
+#lista = lan.split("a")
+#print(lista)
+
+#####
+#print(lan.strip(),"|", sep="") # strip usunie białe znaki na początku i końcu rstrip tylko po prawej, lstrip tylko po lewej
+#print(lan.lstrip(),"|", sep="")
+#print(lan.rstrip(),"|", sep="")
+
+#test= "dd"
+#print(test)
+#print(test.isalpha()) # czy ciąg test, to tylko litery
+#print(test.isspace()) # czy ciąg test, to tylko białe znaki
+#print(test.isdigit()) # czy ciąg test, to tylko cyfry
+#
+#test= "61"
+#print(test)
+#print(test.isalpha())
+#print(test.isspace())
+#print(test.isdigit())
+#
+#test= " \n\t"
+#print(test)
+#print(test.isalpha())
+#print(test.isspace())
+#print(test.isdigit())
+
+#test = "Ala ma 21 kotów i 13 psów"
+#print(test.islower())
+#print(test.isupper())
+#test = test.lower()
+#
+#print(test)
+#test = test.upper()
+#print(test)
+
+####################
+ #                  #
+  #    Przykłady     #
+   #                  #
+    ####################
+
+'''
+Funkcja sumuje wszystkie cyfry zapisane w pliku i zwraca wartoć.
+'''
+def sum_digit(file_name):
+    text = open(file_name).read() # try 'r' jest domylny. Wczytujemy cały plik do pamięci, jako tekst (string)
+    s_digit = 0
     
+    for char in text: # idziemy przez tekst znak po znaku
+        if char.isdigit(): # if char.isdigit()==True:
+            s_digit += int(char)
+        
+    return s_digit
+
+def sum_digit2(file_name):
+    text = open(file_name).read() # try 'r' jest domylny. Wczytujemy cały plik do pamięci, jako tekst (string)
+    s_digit = 0
     
+    for char in text: # idziemy przez tekst znak po znaku
+        try:
+            s_digit += int(char)
+        except:
+            pass
+        
+    return s_digit
+
+#s = sum_digit2("xyz.txt")
+#print(s)
     
+'''
+Funkcja sumuje wszystkie liczb zapisane w pliku (zakładamy, że nie stykają się one z innymi znakami niż białe i zwraca wartoć.
+'''
+# Funkcja dla całkowitych
+def sum_numbers(file_name):
+    text = open(file_name).read() # try 'r' jest domylny. Wczytujemy cały plik do pamięci, jako tekst (string)
     
+    s_num = 0
+    words = text.split()
+    for word in words:
+        if word.isdigit():
+            s_num += int(word)
+        
+    return s_num
+
+# Funkcja dla wszystkich liczb
+def sum_numbers2(file_name):
+    text = open(file_name).read() # try 'r' jest domylny. Wczytujemy cały plik do pamięci, jako tekst (string)
     
+    s_num = 0
+    words = text.split()
+    for word in words:
+        try:
+            s_num += float(word)
+        except:
+            pass
+        
+    return s_num
+
+#s = sum_numbers("xyz.txt")
+#print(s)
+#s = sum_numbers2("xyz.txt")
+#print(s)
+
+'''
+Zadanie, w którym należy stworzyć funkcję -- jako parametr dostaje katalog.
+Należy w katalogu policzyć liczbę wystąpień wszystkich liter (duże traktujemy jak małe).
+I wywietlić.
+
+Algorytm:
+    1. Otworzyć folder i pobrać nazwy wszystkich plików (tylko plików).
+    2. Stwórz słownik do liczenia
+    3. Przejdź przez pliki i otwieraj kolejne pliki:
+        3.1. Zamień wszystkie litery na małe.
+        3.2. Przejdź przez każdy znak:
+            3.2.1. Sprawdź czy litera, jesli tak, to:
+                3.2.1.1. Sprawdź, czy istnieje w słowniku, jeli tak, to:
+                    Zwiększ o 1.
+                    Jesli nie, to:
+                    Dodaj do słownika, jako 1 wystapienie.
+    4. Wywietl słownik.
+'''
+def letters(path):
+    # 1.
+    # Zapisujemy w liscie nazwy plików ze sciezka, czyli os.path.join(path,name)
+    file_names = [os.path.join(path,name) for name in os.listdir(path) 
+                        if os.path.isfile(os.path.join(path,name))] # tylko, jesli sa plikami
+    # 2.
+    counter = {}
+    #Gdybysmy chcieli wszystkie litry, to najpierw je dodajemy z 0:
+    import string
+    for letter in string.ascii_lowercase:
+        counter[letter] = 0
     
-    
-    
-    
-    
-    
-    
+    # 3.
+    for name in file_names:
+        text = open(name).read()
+        # 3.1.
+        text = text.lower()
+        # 3.2.
+        for ch in text:
+            # 3.2.1.
+            if ch.isalpha(): # sprawdzamy, czy litera
+                # 3.2.1.1.
+                if ch in counter:
+                    counter[ch] += 1
+                else:
+                    counter[ch] = 1
+                    
+    print_counter(counter)
 
 
+def print_counter(counter):
+#    for key,val in zip(counter.keys(),counter.values()):
+#        print(f"{key}:\t{val:3}")
+    keys = list(counter.keys())
+    keys.sort()
+    for key in keys:
+        print(f"{key}:\t{counter[key]:3}")
+        
+letters("test")
 
 
-
-
-
+##### Przykład ZIP-a
+#l = [1,2,5,67,1]
+#l2 = ["Ala", 2, 5, 3.4]
+#
+#for el1, el2 in zip(l, l2):
+#    print(el1,el2)
