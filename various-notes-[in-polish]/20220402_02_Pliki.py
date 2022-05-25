@@ -219,6 +219,46 @@ def sum_numbers(file_path):
     return my_sum
 
 print(sum_numbers(r"C:\Users\krzys\Desktop\UE\Python\Kody z zajęć\test\sumowanie.txt"))
+
+#_________________________________________________________________
+#Funkcja zliczająca znaki z plików w katalogu
+
+import os
+
+def letters_count_distinct(path):
+    file_names = [os.path.join(path,name) for name in os.listdir(path)
+                   if os.path.isfile(os.path.join(path,name))]
+                    # Without the 'if', the code would be stuck on a folder
+                    # (if any folders were included in the dir)
+    counter = {}
+    import string
+    # string.ascii_lowercase = pre-initialized string used as string constant.
+    # abcdefghijklmnopqrstuvwxyz
+    # Code below creates a dictionary containing letters
+    for letter in string.ascii_lowercase:
+        counter[letter] = 0  
+
+    for name in file_names:
+        text = open(name).read()
+        text = text.lower()
+        
+        for ch in text:
+           if ch.isalpha():  # Check if the character is a letter
+                if ch in counter:
+                    counter[ch] += 1
+                else:
+                    counter[ch] = 1
+        
+    print_counter(counter)
+        
+        
+def print_counter(counter):
+    keys = list(counter.keys())
+    keys.sort()
+    for key in keys:
+        print(f"{key}:\t{counter[key]:3}")
+
+letters_count_distinct(r"C:\Users\krzys\Desktop\UE\Python\Kody z zajęć\test")
     
     
     
