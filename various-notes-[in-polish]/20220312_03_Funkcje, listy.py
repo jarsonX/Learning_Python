@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 ########################################
 #                                      #
 #           Wstęp do funkcji           #
@@ -73,7 +70,7 @@ def stopnie_C_na_F(st_C):
 #                                      #
 ########################################
 
-# Lista, to taka "zmienna", która ma wiele ("niskończenie") pudełek, a nie tylko jedno.
+# Lista, to taka "zmienna", która ma wiele ("nieskończenie") pudełek, a nie tylko jedno.
 
 # a = 5
 
