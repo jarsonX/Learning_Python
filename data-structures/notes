@@ -1,0 +1,7 @@
+Mutability: Whether or not a variable can have its value changed after being declared. 
+
+Mutable Variable: A variable whose value can change after it has been declared. 
+
+Immutable Variable: A variable whose value cannot change after it has been declared.
+
+Methods: Functions that are contained within data types.
