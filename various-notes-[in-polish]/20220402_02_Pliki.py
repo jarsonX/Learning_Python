@@ -117,7 +117,108 @@ plik_wy.write(f"{s} jest w wieku {wiek} (lat) i ma wstostu: {wzrost} (w metrach)
 
 plik_wy.close()
     
+
+#_________________________________________________________________
+
+import os
+
+my_dir: str = r"C:\Users\krzys\Desktop"
+
+
+'''PATHS, FILES & DIRECTORIES
+
+os.getcwd()     # Miejsce wywołania skryptu.
+os.path.sep     # Separator odpowiedni dla danego OS.
+                # Przydatne przy łączeniu dir i file nam w path.
+
+os.path.join(dir_path, file) # Łączy directory i file name w path.
     
+os.path.exists(path)    # Sprawdza czy path istnieje.
+os.path.isdir(path)     # Sprawdza czy pod path jest katalog.
+os.path.isfile(path)    # Sprawdza czy pod path jest plik.
+
+os.listdir()    # Zwraca zawartosć katalogu w formie listy.'''
+
+# print("The directory contains:")
+# for a_file in os.listdir(my_dir):
+#     print(a_file)
+    
+# print("\nThe file paths are:")
+# for a_file in os.listdir(my_dir):
+#     print(os.path.join(my_dir, a_file))
+
+
+'''HANDLING FILES'''
+
+# Odczyt calego pliku
+def read_a_file(file_path):
+    text = open(file_path).read()
+    print(text)
+    text.close()
+
+# Odczyt pliku do listy
+def read_to_list(file_path):
+    a_list = open(file_path).readlines()
+    print(a_list)
+    a_list.close()
+    
+# Odczyt pliku do listy (usuwa whitespaces)
+def read_to_list_2(file_path):
+    a_list = open(file_path).readlines()
+    for i in range(len(a_list)):
+        a_list[i] = a_list[i].rstrip()
+    # a_list = list(map(lambda el: el.strip(), a_list))  # Alternatywa dla for
+    print(a_list)
+    a_list.close()
+    
+# Odczyt pliku linia po linii (oszczędza pamięć)
+def read_by_line(file_path):
+    a_file = open(file_path)
+    a_line = a_file.readline()
+    while a_line:
+        print(a_line)
+        a_line = a_file.readline()
+    a_file.close()
+
+# Odczyt znak po znaku
+def read_by_char1(file_path):
+    a_file = open(file_path)
+    char = a_file.read(1)
+    while char:
+        print(char, ord(char))
+        char = a_file.read(1)
+    a_file.close()
+
+# Odczyt znak po znaku z pominięciem kodu ASCII spacji.
+def read_by_char2(file_path):
+    a_file = open(file_path)
+    char = a_file.read(1)
+    while char:
+        if ord(char) != 10:
+            print(char, ord(char))
+        else:
+            print()
+        char = a_file.read(1)
+    a_file.close()
+
+   
+#read_by_char2(r"C:\Users\krzys\Desktop\UE\Python\Kody z zajęć\test\xyz.txt")
+
+'''COUNTING NUMBERS'''
+
+# Sumowanie wszystkich liczb (a nie cyfr)
+def sum_numbers(file_path):
+    a_file = open(file_path).read()
+    a_file = a_file.split()  # Dzieli po spacjach.
+    my_sum = 0
+    for a_number in a_file:
+        try:
+            my_sum += float(a_number)
+        except:
+            pass
+    return my_sum
+
+print(sum_numbers(r"C:\Users\krzys\Desktop\UE\Python\Kody z zajęć\test\sumowanie.txt"))
     
     
     
