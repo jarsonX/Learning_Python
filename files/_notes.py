@@ -1,4 +1,5 @@
-#FILE MODES
+#FILE MODS
+##############################################################################
 # r - read
 # r+ - read and write, cannot truncate
 # w - write, cursor at the beginning
@@ -12,6 +13,7 @@
 # relative to current position and end.
 
 #WRITING FILES
+##############################################################################
 #Overwrites a file
 
 file_1: str = r"C:\Users\krzys\Downloads\Example1.txt"
@@ -23,6 +25,7 @@ with open(file_2, "w") as writefile:
     writefile.write("This is line C in file 2\n")
     
 #WRITING FROM A LIST
+##############################################################################
 #Overwrites a file
 #.write can only write strings
 
@@ -31,8 +34,16 @@ lines_to_write = ["This is the beginning\n", "This is the middle\n", "And this i
 with open(file_2, "w") as writefile:
     for line in lines_to_write:
         writefile.write(line)
-        
+
+#WRITELINES METHOD
+##############################################################################
+lines_to_write = ['ABC', 'DEF', 'GHJ']
+
+with open(file_2, 'w') as writefile:
+    writefile.writelines(lines_to_write)
+
 #APPENDING FILES
+##############################################################################
 #Do not overwrite a file
 
 with open(file_2, "a") as appendfile:
@@ -40,6 +51,7 @@ with open(file_2, "a") as appendfile:
     appendfile.write("And they continue like a lot!\n")
     
 #COPYING A FILE
+##############################################################################
     
 with open(file_1, "r") as readfile:
     with open(file_2, "w") as writefile:
