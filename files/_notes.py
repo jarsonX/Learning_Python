@@ -21,9 +21,19 @@ file_2: str = r"C:\Users\krzys\Downloads\Example2.txt"
 ##############################################################################
 inputfile = open(file_1, "r")
 
+#READLINE
+#####################
 inputfile.readline()  #read the current line and stop at the beginning of the next line
 inputfile.readline()  #read the next line and stop at the beginning of the next line
 print(inputfile.readline().strip())  #strip is to remove \n and avoid additional, blank line
+
+#LOADING INTO LISTS
+#####################
+my_list = []
+inputfile = open(file_1, "r")
+
+for line in inputfile:
+    my_list.append(line.strip())
 
 #WRITING FILES
 ##############################################################################
