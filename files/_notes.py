@@ -40,7 +40,10 @@ with open(file_2, "w") as writefile:
 lines_to_write = ['ABC', 'DEF', 'GHJ']
 
 with open(file_2, 'w') as writefile:
-    writefile.writelines('\n'.join(lines_to_write))
+    writefile.writelines(lines_to_write)  #writes all els in the same line
+    
+with open(file_2, 'w') as writefile:   
+    writefile.write('\n'.join(lines_to_write))  #so this is more useful
 
 #APPENDING FILES
 ##############################################################################
