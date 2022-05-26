@@ -25,7 +25,7 @@ with open(file_2, "w") as writefile:
     writefile.write("This is line C in file 2\n")
     
 #WRITING FROM A LIST
-##############################################################################
+#####################
 #Overwrites a file
 #.write can only write strings
 
@@ -36,7 +36,7 @@ with open(file_2, "w") as writefile:
         writefile.write(line)
 
 #WRITELINES METHOD
-##############################################################################
+#####################
 lines_to_write = ['ABC', 'DEF', 'GHJ']
 
 with open(file_2, 'w') as writefile:
@@ -44,6 +44,15 @@ with open(file_2, 'w') as writefile:
     
 with open(file_2, 'w') as writefile:   
     writefile.write('\n'.join(lines_to_write))  #so this is more useful
+
+#WRITE USING PRINT
+#####################
+lines_to_write = ['ABC', 'DEF', 'GHJ']
+
+writefile = open(file_2, 'w')
+
+for el in lines_to_write:
+    print(name, file = writefile)  #automatically prints each in a new line
 
 #APPENDING FILES
 ##############################################################################
