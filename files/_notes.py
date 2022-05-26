@@ -23,7 +23,7 @@ inputfile = open(file_1, "r")
 
 inputfile.readline()  #read the current line and stop at the beginning of the next line
 inputfile.readline()  #read the next line and stop at the beginning of the next line
-
+print(inputfile.readline().strip())  #strip is to remove \n and avoid additional, blank line
 
 #WRITING FILES
 ##############################################################################
