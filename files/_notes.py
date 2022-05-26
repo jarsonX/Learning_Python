@@ -40,7 +40,7 @@ with open(file_2, "w") as writefile:
 lines_to_write = ['ABC', 'DEF', 'GHJ']
 
 with open(file_2, 'w') as writefile:
-    writefile.writelines(lines_to_write)
+    writefile.writelines('\n'.join(lines_to_write))
 
 #APPENDING FILES
 ##############################################################################
