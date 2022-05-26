@@ -12,12 +12,22 @@
 # from. "From" can take the valu eof 0, 1, 2 corresponding to beginning,
 # relative to current position and end.
 
+#EASY WAY TO STORE LOCATION OF A FILE
+##############################################################################
+file_1: str = r"C:\Users\krzys\Downloads\Example1.txt"
+file_2: str = r"C:\Users\krzys\Downloads\Example2.txt"
+
+#READING FILES
+##############################################################################
+inputfile = open(file_1, "r")
+
+inputfile.readline()  #read the current line and stop at the beginning of the next line
+inputfile.readline()  #read the next line and stop at the beginning of the next line
+
+
 #WRITING FILES
 ##############################################################################
 #Overwrites a file
-
-file_1: str = r"C:\Users\krzys\Downloads\Example1.txt"
-file_2: str = r"C:\Users\krzys\Downloads\Example2.txt"
 
 with open(file_2, "w") as writefile:
     writefile.write("This is line A in file 2\n")
