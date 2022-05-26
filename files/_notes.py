@@ -89,3 +89,32 @@ with open(file_1, "r") as readfile:
     with open(file_2, "w") as writefile:
         for line in readfile:
             writefile.write(line)
+            
+#SAVE AND LOAD FUNCTIONS
+##############################################################################
+
+#Saves in_list to the file
+def save(filename, in_list):
+    outputfile = open(filename, "w")
+    
+    for item in in_list:
+        print(item, file = outputfile)
+        
+    outputfile.close()
+    
+#Loads from filename and returns a list of the contents
+def load(filename):
+    inputfile = open(filename, "r")
+    in_list = []
+    
+    for line in inputfile:
+        in_list.append(line.strip())
+    
+    inputfile.close()
+    return in_list
+
+#Example
+my_list = ['ABC', 'BCD']
+save("file_sample_01.txt", my_list)
+new_list = load("file_sample_01.txt")
+print(new_list)
