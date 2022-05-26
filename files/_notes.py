@@ -24,6 +24,7 @@ with open(file_2, "w") as writefile:
     
 #WRITING FROM A LIST
 #Overwrites a file
+#.write can only write strings
 
 lines_to_write = ["This is the beginning\n", "This is the middle\n", "And this is the end\n"]
 
