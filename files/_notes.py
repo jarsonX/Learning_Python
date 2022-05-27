@@ -27,6 +27,10 @@ inputfile.readline()  #read the current line and stop at the beginning of the ne
 inputfile.readline()  #read the next line and stop at the beginning of the next line
 print(inputfile.readline().strip())  #strip is to remove \n and avoid additional, blank line
 
+#READLINES
+#####################
+inputfile.readines()  #returns a list of all the lines
+
 #LOADING INTO LISTS
 #####################
 my_list = []
