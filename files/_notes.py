@@ -31,6 +31,10 @@ print(inputfile.readline().strip())  #strip is to remove \n and avoid additional
 #####################
 inputfile.readines()  #returns a list of all the lines
 
+#ITERATING THROUGH LINES
+#####################
+for line in inputFile:  #the same as writing: 'for line in inputfile.readlines():' / 'lines = inputfile.readlines()'
+
 #LOADING INTO LISTS
 #####################
 my_list = []
