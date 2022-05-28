@@ -98,8 +98,7 @@ tag_string = tag_child.string  #'Lebron James'
 
 #FIND ALL FILTER AND ITERATION THROUGH RESULTSET
 ###############################################################################
-#Looks through a tag’s descendants and retrieves all descendants that match 
-#filters.
+#Looks through a tag’s descendants and retrieves all that match filters.
 
 #Syntax: find_all(name, attrs, recursive, string, limit, **kwargs)
 
