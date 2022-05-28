@@ -17,6 +17,18 @@
 file_1: str = r"C:\Users\krzys\Downloads\Example1.txt"
 file_2: str = r"C:\Users\krzys\Downloads\Example2.txt"
 
+#ACCESSING FILES
+##############################################################################
+inputfile = open(file_1)
+file_1.close()
+
+path = os.path.join(os.getcwd(),'file_name.txt')
+#getcwd() returns the absolute path of the working directory where Python 
+#is currently running
+
+with open(path,'wb') as f:  #with automatically closes file
+    f.write(r.content)
+
 #READING FILES
 ##############################################################################
 inputfile = open(file_1, "r")
