@@ -1,5 +1,5 @@
 #HTTP USING THE REQUESTS LIBRARY IN PYTHON
-#Allows to send HTTP requests
+#Allows to send HTTP requests and download a webpage.
 
 #REQUESTS MODULE BASICS
 ############################################################
