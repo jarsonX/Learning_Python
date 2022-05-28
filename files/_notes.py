@@ -63,6 +63,11 @@ with open(file_2, "w") as writefile:
     writefile.write("This is line A in file 2\n")
     writefile.write("This is line B in file 2\n")
     writefile.write("This is line C in file 2\n")
+
+with open(file_2, "w") as writefile:
+    print("This is line A in file 2\n", file=writefile)
+    print("This is line B in file 2\n", file=writefile)
+    print("This is line C in file 2\n", file=writefile)
     
 #WRITING FROM A LIST
 #####################
