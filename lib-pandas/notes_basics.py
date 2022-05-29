@@ -59,7 +59,11 @@ my_df['new_col'] = df.apply(lambda row : row[0]+row[1]+row[2], axis=1)
 
 
 ######## BASIC EXPLORING
-my_df.info()  #statistical overview about df
+
+#Statistical overview
+my_df.info() 
+my_df.describe()
+
 my_df.at[0, 'Money']  #retrieve a value
 my_df.loc[0, 'Money']  #like above
 my_df.iloc[0,2]  #like above
