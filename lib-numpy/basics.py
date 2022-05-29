@@ -11,6 +11,14 @@ a[1:5:2]
 
 a[1:5] = 100  #assings 100 to all elements in slice
 
+#PRINTING ARRAYS
+########################################################################################
+#Printing array results in the array format, [1 2 3]. If we want the form of a list, we
+#can use loop like that:
+
+for x in array_name:
+  print(x)
+
 #BASIC OPERATIONS ON VECTORS/ARRAYS
 ########################################################################################
 u = np.array([1,0])
