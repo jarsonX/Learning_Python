@@ -24,4 +24,5 @@ print(path)
 with open(path,'wb') as f:
     f.write(r.content)
     
-Image.open(path)
+img = Image.open(path)
+img.show()
