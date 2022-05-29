@@ -59,6 +59,7 @@ my_df['new_col'] = df.apply(lambda row : row[0]+row[1]+row[2], axis=1)
 
 
 ######## BASIC EXPLORING
+my_df.info()  #statistical overview about df
 my_df.at[0, 'Money']  #retrieve a value
 my_df.loc[0, 'Money']  #like above
 my_df.iloc[0,2]  #like above
@@ -94,21 +95,3 @@ ser_1.std(ddof = 2)
 
 #By default, pandas won't print the entire DF to consol, so let's change that:
 pandas.set_option("display.max_rows", None, "display.max_columns", None) 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
