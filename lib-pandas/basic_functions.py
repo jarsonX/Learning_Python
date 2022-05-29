@@ -44,13 +44,14 @@ ser_2.fillna()  #fills with 0s
 
 ######## TRANSFORMING
 ser_2.abs()  #absolute values
-ser_3 = ser_1.append(ser_2)  #appends col_1 to the end of col_2
+ser_1.append(ser_2)  #appends col_1 to the end of col_2
 ser_4 = ser_1.add(ser_2)  #adds series .add(seriesX, fill_value=N)
 ser_4 = ser_1.sub(ser_2)  #subtracts series
 #other operations: .mul, .div, .mod, .pow
 #we can add, sub etc. series to itself
 list_1_to_list = list_1.tolist()  #converts to list
 list_1_to_array = list_1.array  #converts to numpy's array
+my_df.columns = ['Col1', 'Col2', 'Col3']  #sets column headers
 my_df.T  #transpose (switch rows and cols)
 my_df.apply(add,axis=1)  #apply function to each row
 #apply function to each row using lambda
