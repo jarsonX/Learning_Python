@@ -24,4 +24,8 @@ my_divisor = 4
 print("Quotient:", my_quotient)
 print("Remainder:", my_remainder)
 
+####Accessing values in tuples
+
+my_tup[0]
+my_tup[0][0]  #if nested
 
