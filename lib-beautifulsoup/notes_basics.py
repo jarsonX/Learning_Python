@@ -81,8 +81,8 @@ sibling_3 = sibling_2.next_sibling  #and so on.
 #HTML ATTRIBUTES
 ###############################################################################
 tag_child.attrs  #list of attributes
-tag_child['id']  #accessing an attributes
-tag_child.get('id')  #accessing content of the atrribute
+tag_child['id']  #accessing an attribute (dictionary-like approach)
+tag_child.get('id')  #accessing an attribute by get method
 
 #NAVIGABLE STRING
 ###############################################################################
