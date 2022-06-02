@@ -86,7 +86,6 @@ tag_child.get('id')  #accessing an attribute by get method
 
 #NAVIGABLE STRING
 ###############################################################################
-
 #A class that contains string from a tag (type NavigableString), similar to
 #a Python string, but also supports some BeautifulSoup features.
 tag_string = tag_child.string  #'Lebron James'
