@@ -169,7 +169,6 @@ table_bs.find_all(string="Florida")
 
 #FIND
 ###############################################################################
-
 #Finds the first element in the document.
 
 #Syntax: find(name, attrs)
