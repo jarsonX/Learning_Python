@@ -18,6 +18,11 @@
 from bs4 import BeautifulSoup # this module helps in web scrapping.
 import requests  # this module helps us to download a web page
 
+#Downloading a page in steps:
+url = "www.jarson.com"
+data = requests.get(url).text  #this returns the html code
+data_as_soup_object = BeautifulSoup(data, "html.parser")
+
 #An example page
 #Normally, we would need to download it using requests module.
 
