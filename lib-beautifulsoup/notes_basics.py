@@ -70,6 +70,8 @@ tag_object = soup.h3  #<h3><b id="boldest">Lebron James</b></h3>
 #Children (goes one level down the tree)
 tag_child = tag_object.b  #<b id="boldest">Lebron James</b>
 
+#Note: to go down a table, we would use .td rather than .b!
+
 #Parent (goes one level up the tree)
 parent_tag = tag_child.parent  #<h3><b id="boldest">Lebron James</b></h3>
 
@@ -129,8 +131,12 @@ table_bs = BeautifulSoup(table, "html.parser")
 #Name
 ############
 #When we set the name parameter to a tag name, the method will extract all the 
-#tags with that name and its children. The result is a list-like ResultSet.
+#tags with that name and its children. The result is a list-like ResultSet and
+#it's iterable just like any list.
 table_rows = table_bs.find_all('tr')
+first_row = table_rows[0]
+
+#This is a table, so to obtain a child we use .td rather than .b, i.e. first_row.td
 
 #We can iterate through ResultSet
 for i,row in enumerate(table_rows):
