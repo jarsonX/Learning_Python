@@ -250,3 +250,11 @@ first_t = two_tables_bs.find("table")
 
 #Finding the second element is a bit tricky, because we need more details to narrow down the search, like a specific class.
 second_t = two_tables_bs.find("table", class_ = "pizza")  #an underscore ("_") is needed, because "class" is a keyword in Python
+
+#CASE: SCRAPE ALL LINKS
+###############################################################################
+url = "http://www.ibm.com"
+data  = requests.get(url).text
+soup = BeautifulSoup(data,"html.parser")
+for link in soup.find_all('a', href=True):  #in html link is represented by the tag <a>
+      print(link.get('href'))
