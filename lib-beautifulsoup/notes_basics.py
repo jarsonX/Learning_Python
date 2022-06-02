@@ -240,8 +240,8 @@ table_bs.find_all(string="Florida")
 two_tables = "<h3>Rocket Launch </h3><p><table class='rocket'><tr><td>Flight No</td><td>Launch site</td> <td>Payload mass</td></tr><tr><td>1</td><td>Florida</td><td>300 kg</td></tr><tr><td>2</td><td>Texas</td><td>94 kg</td></tr><tr><td>3</td><td>Florida </td><td>80 kg</td></tr></table></p><p><h3>Pizza Party  </h3><table class='pizza'><tr><td>Pizza Place</td><td>Orders</td> <td>Slices </td></tr><tr><td>Domino's Pizza</td><td>10</td><td>100</td></tr><tr><td>Little Caesars</td><td>12</td><td >144 </td></tr><tr><td>Papa John's </td><td>15 </td><td>165</td></tr>"
 two_tables_bs = BeautifulSoup(two_tables, 'html.parser')
 
-#Find any first element is easy:
+#Finding any first element is easy:
 first_t = two_tables_bs.find("table")
 
-#Find the second element is more tricky, because we need more details, like a specific class.
+#Finding the second element is a bit tricky, because we need more details to narrow down the search, like a specific class.
 second_t = two_tables_bs.find("table", class_ = "pizza")  #an underscore ("_") is needed, because "class" is a keyword in Python
