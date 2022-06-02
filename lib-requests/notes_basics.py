@@ -55,7 +55,7 @@ print('--------------------------------------------------\n')
 
 #POST REQUEST
 ############################################################
-#It's sends data to a server just like GET, but the data is
+#It sends data to a server just like GET, but the data is
 #included in a request body rather than url.
 
 url_post = 'http://httpbin.org/post'
