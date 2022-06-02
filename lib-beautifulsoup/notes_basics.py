@@ -1,6 +1,5 @@
 #FUNDAMENTALS
 ###############################################################################
-
 #Beautiful Soup is a Python library for pulling data out of HTML and XML files.
 #In case of HTML, this is accomplished by representing the HTML as a set of 
 #objects with methods used to parse the HTML. We can navigate the HTML as 
@@ -45,7 +44,6 @@ html = "<!DOCTYPE html><html><head><title>Page Title</title></head><body><h3><b 
 
 #SOUP OBJECT
 ###############################################################################
-
 #Beautiful Soup transforms a complex HTML document into a complex tree of 
 #Python objects, i.e. a nested structure.
 
@@ -56,7 +54,6 @@ print(soup.prettify())
 
 #TAG
 ###############################################################################
-
 #Let's say we want the title of the page and the name of the top paid player.
 #The Tag object corresponds to an HTML tag in the original document, 
 #for example, the tag title.
@@ -70,7 +67,6 @@ tag_object = soup.h3  #<h3><b id="boldest">Lebron James</b></h3>
 
 #CHILDREN, PARENTS, SIBLINGS
 ###############################################################################
-
 #Children (goes one level down the tree)
 tag_child = tag_object.b  #<b id="boldest">Lebron James</b>
 
@@ -84,7 +80,6 @@ sibling_3 = sibling_2.next_sibling  #and so on.
 
 #HTML ATTRIBUTES
 ###############################################################################
-
 tag_child.attrs  #list of attributes
 tag_child['id']  #accessing an attributes
 tag_child.get('id')  #accessing content of the atrribute
