@@ -13,7 +13,7 @@
 #!mamba install bs4==4.10.0 -y
 #!pip install lxml==4.6.4
 #!mamba install html5lib==1.1 -y
-# !pip install requests==2.26.0
+#!pip install requests==2.26.0
 
 #Modules
 from bs4 import BeautifulSoup # this module helps in web scrapping.
