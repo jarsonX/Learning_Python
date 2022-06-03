@@ -1,0 +1,26 @@
+BASICS
+################################################################################
+________________________________________
+SELECT STATEMENT
+
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition/predicate;
+
+________________________________________
+COUNT
+
+SELECT COUNT(*)
+FROM table_name
+
+________________________________________
+DISTINCT - removes duplicates
+
+SELECT DISTINCT column_name
+FROM table_name
+
+________________________________________
+LIMIT - restricts number of rows
+
+SELECT * from table_name
+LIMIT 10
