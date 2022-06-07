@@ -1,15 +1,15 @@
 #Some useful things about tuples
 
-####Assigning multiple values (the same can be done with lists)
+####Assigning multiple values / 'Unpacking' tuples
+#(the same can be done with lists) 
 
-def unpack_and_reverse(a_tuple):
-    (el_1, el_2, el_3) = a_tuple[0:3]
-    return (el_3, el_2, el_1)
+book = ("Of Mice and Men", "John Steinbeck", "978-0-140-17739-8")
 
-print(unpack_and_reverse(("a", "b", "c", "d", "e")))
-print(unpack_and_reverse(("f", "g", "h")))
-print(unpack_and_reverse(("i", "j", "k", "l", "m", "n", "o", "p", "q", "r")))
+title, author, isbn = book
 
+print(title)
+print(author)
+print(isbn)
 
 ####Retrieving multiple values from a function (the same can be done with lists)
 
