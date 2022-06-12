@@ -1,6 +1,9 @@
 # PANDAS
 # Useful functions for basic operations and pre-processing
 
+#By default, pandas won't print the entire DF to consol, so let's change that:
+pandas.set_option("display.max_rows", None, "display.max_columns", None) 
+
 import pandas
 
 ######## LOADING AND SAVING DATA
@@ -96,6 +99,3 @@ ser_1.mean()
 ser_1.median()
 ser_1.std()  #denominator N-1 by default
 ser_1.std(ddof = 2)
-
-#By default, pandas won't print the entire DF to consol, so let's change that:
-pandas.set_option("display.max_rows", None, "display.max_columns", None) 
