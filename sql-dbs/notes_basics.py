@@ -1,6 +1,6 @@
 #DB-API CODE SCHEME
 ####################################################################################################
-from dbmodule import connect
+import <<<appropriate module>>>
 
 connection = connect ('databasename', 'username', 'pswd')  #connection object
 cursor = connection.cursor()  #cursor object
@@ -42,7 +42,7 @@ table = """ create table IF NOT EXISTS INSTRUCTOR(ID INTEGER PRIMARY KEY NOT NUL
 cursor.execute(table)
 
 #Insert data
-cursor_obj.execute('''insert into INSTRUCTOR values (1, 'Jar', 'Criss', 'Katowice', 'PL')''')
+cursor.execute('''insert into INSTRUCTOR values (1, 'Jar', 'Criss', 'Katowice', 'PL')''')
 
 #Query data
 cursor.execute('SELECT * FROM INSTRUCTOR;')
@@ -56,4 +56,29 @@ for row_all in output_all:
 import pandas as pd
 df = pd.read_sql_query("SELECT * FROM INSTRUCTOR;", connection)
 
+cursor.close()
+connection.close()
+
+#SQL SERVER EXAMPLE
+####################################################################################################
+import pyodbc
+
+connection = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=<<<SERVER_NAME>>>;DATABASE=<<<DB_NAME>>>;Trusted_Connection=yes;')
+cursor = connection.cursor()
+
+#Query data
+cursor.execute('SELECT CategoryID, CategoryName, Description FROM Categories')
+
+output_all = cursor.fetchall()
+for row_all in output_all:
+  print(row_all)
+
+#Retrieve data into pandas
+import pandas as pd
+#pd.set_option("display.max_rows", 10, "display.max_columns", 3) 
+df = pd.read_sql_query('SELECT CategoryID, CategoryName, Description FROM Categories', connection)  
+
+print(df)
+
+cursor.close()
 connection.close()
