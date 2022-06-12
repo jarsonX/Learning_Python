@@ -80,5 +80,8 @@ df = pd.read_sql_query('SELECT CategoryID, CategoryName, Description FROM Catego
 
 print(df)
 
+#Save to csv
+df.to_csv(r'C:\Users\username\Desktop\example.csv')
+
 cursor.close()
 connection.close()
