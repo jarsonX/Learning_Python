@@ -44,6 +44,12 @@ print(new_dict)
 if "Jarvis" in new_dict:
     print(new_dict["Jarvis"])  #prints value for Jarvis
 
+#SORTING
+##############################################################################    
+
+dictionary = sorted(dictionary)
+dictionary[key].sort()  #only if value is sortable (like a list)
+
 #TRAVERSING DICTIONARIES
 ##############################################################################
 
