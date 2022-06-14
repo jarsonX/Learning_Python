@@ -23,6 +23,10 @@
 #Above are important for loops, e.g. in order to get both a value and a key
 #at the same time in loop, we should use 'for (key, value) in dict.items():'
 
+#dictionary.setdefault(key, []): creates a key with default value of empty list
+    #the key is created only, if it does not already exist
+    #this is very useful for creating dictionaries, e.g. from a list
+
 #BASICS
 ##############################################################################
 
