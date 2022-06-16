@@ -16,13 +16,6 @@ import pandas
 # data.to_json('data.json')
 # data.to_pickle('data.bin')
 
-######## LOADING AND SAVING DATA FROM SQL
-#from sqlalchemy import create_engine
-# Just an example, so it won't work
-# engine = create_engine('sqlite://')
-# data_sql = pandas.read_sql('data', engine)
-# data.to_sql('data', con=engine)
-
 ######## CREATING SERIES & DATAFRAMES
 list_1 = [1,-3,3,100,-4,4,5,-6,7]
 ser_1 = pandas.Series(list_1)
