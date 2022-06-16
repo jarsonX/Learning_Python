@@ -3,6 +3,14 @@
 #Cell magics - start with %% and apply to the entire cell.
 #Line magics - start with % and apply to a particular line in a cell.
 
+#Initializing SQL Magic in Jupyter notebooks to communicate with db:
+!pip install ipython-sql
+%load_ext sql
+
+#------------------------------------------------------------------------------------------#
+#----------------------------------------------------------------------------------QUERYING-
+#------------------------------------------------------------------------------------------#
+
 #Automatically queries and fetches results:
 %sql SELECT * FROM tablename
 
@@ -25,8 +33,9 @@ import seaborn
 plot = seaborn.barplot(x='Test Score',y='Frequency', data=dataframe)
 
 
-##########################################################################################
-#Table used in the above:
+#------------------------------------------------------------------------------------------#
+#--------------------------------------------------------------------TABLE-USED-IN-EXAMPLES-
+#------------------------------------------------------------------------------------------#
 
 %%sql
 
