@@ -150,7 +150,6 @@ import json
 with open('file.json', 'r') as input_file: 
     json_object = json.load(input_file) 
 
-
 #MICROSOFT EXCEL OPEN XML (XLSX)
 ##############################################################################
 #A spreadsheet file format where data is organized under the cells and columns
@@ -265,7 +264,6 @@ for node in root:
 import pandas as pd
 
 df = pd.read_xml('file.xml', xpath="...\...")
-
 
 #BINARY FILE FORMAT
 ##############################################################################
