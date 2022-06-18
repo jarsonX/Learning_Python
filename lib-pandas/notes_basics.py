@@ -36,6 +36,11 @@ my_df_2['Column_1'] = my_list
 and so on...
 
 ____________________________________________________________________________________________________
+DATATYPES
+
+data['col1'] = data['col1'].astype(float)
+
+____________________________________________________________________________________________________
 CLEANING
 sorted_order = ser_2.argsort()  	#returns sorted order of indices
 ser_2[sorted_order] 			#col_2 in sorted order
