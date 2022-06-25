@@ -92,7 +92,7 @@ my_df.size 				#number of attributes*elements (cols*rows)
 my_df.head(2)  				#first 2 (default = 5)
 my_df.tail(2)  				#last 2 (defaul = 5)
 ser_1.index  				#range of values
-ser_1.dtype  				#checks type
+ser_1.dtypes  				#checks type
 ser_1.size  				#counts objects
 ser_1.count()  				#counts objects, ignoring missing values
 ser_1.name  				#column name
