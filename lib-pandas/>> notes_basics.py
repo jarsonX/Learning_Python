@@ -9,8 +9,8 @@ import pandas
 ____________________________________________________________________________________________________
 LOADING AND SAVING DATA
 # data_1 = pandas.read_csv('data.csv')		keyword parameter header is True by default,
-# data_2 = pandas.read_json('data.json')	can be changed to 'None'
-# data_3 = pandas.read_pickle('data.bin')
+# data_2 = pandas.read_json('data.json')	can be changed to 'None' which will cause
+# data_3 = pandas.read_pickle('data.bin')	headers to be displayed as integers (col nums)
 
 # data.to_csv('data.csv')
 # data.to_json('data.json')
