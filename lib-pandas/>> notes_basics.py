@@ -82,6 +82,7 @@ BASIC EXPLORING
 
 my_df.info() 
 my_df.describe()
+my_df.describe(inlcude='all') #includes non-numeric
 
 my_df.at[0, 'Money']  			#retrieve a value
 my_df.loc[0, 'Money']  			#like above ('0' is actually a row's title, not index)
