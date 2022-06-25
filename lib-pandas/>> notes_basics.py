@@ -46,6 +46,8 @@ sorted_order = ser_2.argsort()  	#returns sorted order of indices
 ser_2[sorted_order] 			#col_2 in sorted order
 ser_2[ser_2.argsort()]  		#one line
 
+data = data.replace('?', np.NaN)	#useful because dropna() can remove only NaNs
+
 ser_1.hasnans  				#checks if there are any NaN values
 ser_2.all()  				#checks if all objects have a value assigned
 ser_2.isnull()  			#check nulls
