@@ -12,9 +12,9 @@ LOADING AND SAVING DATA
 # data_2 = pandas.read_json('data.json')	can be changed to 'None' which will cause
 # data_3 = pandas.read_pickle('data.bin')	headers to be displayed as integers (col nums)
 
-# data.to_csv('data.csv')
-# data.to_json('data.json')
-# data.to_pickle('data.bin')
+# data.to_csv('data.csv')			keyword parameter index is True by default,
+# data.to_json('data.json')			can be changed to False which will cause index
+# data.to_pickle('data.bin')			index column not to be saved
 
 ____________________________________________________________________________________________________
 CREATING SERIES & DATAFRAMES
