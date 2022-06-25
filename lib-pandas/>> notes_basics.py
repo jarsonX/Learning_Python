@@ -1,7 +1,7 @@
 # PANDAS
 # Useful functions for basic operations and pre-processing
 
-#By default, pandas won't print the entire DF to consol. This can be changed.
+#By default, pandas won't print the entire DF to console. This can be changed.
 #Just keep in mind this is not always a good idea.
 pandas.set_option("display.max_rows", None, "display.max_columns", None) 
 
