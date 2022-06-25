@@ -83,7 +83,7 @@ ________________________________________________________________________________
 BASIC EXPLORING
 
 my_df.info()  #top and last 30 rows 
-my_df.describe()
+my_df.describe()  #ignores NaNs
 my_df.describe(inlcude='all')  #includes non-numeric
 my_df.columns  #headers
 
