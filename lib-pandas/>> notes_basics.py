@@ -8,7 +8,7 @@ pandas.set_option("display.max_rows", None, "display.max_columns", None)
 import pandas
 ____________________________________________________________________________________________________
 LOADING AND SAVING DATA
-# data_1 = pandas.read_csv('data.csv')
+# data_1 = pandas.read_csv('data.csv')		keyword parameter header is True by default
 # data_2 = pandas.read_json('data.json')
 # data_3 = pandas.read_pickle('data.bin')
 
