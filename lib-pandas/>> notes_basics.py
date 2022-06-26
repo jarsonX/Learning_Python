@@ -83,9 +83,14 @@ my_df.apply(add,axis=1)  				#apply function to each row
 my_df['new_col'] = df.apply(lambda row : row[0]+row[1]+row[2], axis=1)
 
 #discretization
-my_df['Column'] = pd.cut(my_df['Column'], 2, labels = ['Yes', 'No'])
+my_df['Column'] = pd.cut(my_df['Column'], 2, labels = ['Yes', 'No'])  #or qcut
 
-or qcut
+#discretization with pandas and numpy
+bins = numpy.linspace(min(df['price']), max(df['price']), 4)  #array that contains 4 equally spaced
+							      #numbers over the specified interval
+							      #of price
+group_names = ['Low', 'Mid', 'High']
+df['price-binned'] = pandas.cut(df['price'], bins, labels = group_names, include_lowest = True)
 
 ____________________________________________________________________________________________________
 BASIC EXPLORING
