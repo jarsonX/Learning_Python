@@ -65,6 +65,9 @@ ser_4 = ser_1.sub(ser_2)  		#subtracts series
 #other operations: .mul, .div, .mod, .pow
 #we can add, sub etc. series to itself
 
+#simple operations (that apply to each row in a series/col) can be done like this:
+ser_2 = ser_2 + 1
+
 list_1_to_list = list_1.tolist()  		#converts to list
 list_1_to_array = list_1.array  		#converts to numpy's array
 my_df.columns = ['Col1', 'Col2', 'Col3']  	#sets column headers
