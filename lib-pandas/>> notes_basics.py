@@ -92,6 +92,17 @@ bins = numpy.linspace(min(df['price']), max(df['price']), 4)  #array that contai
 group_names = ['Low', 'Mid', 'High']
 df['price-binned'] = pandas.cut(df['price'], bins, labels = group_names, include_lowest = True)
 
+#turning categorical variables into quantitative variables
+
+pd.get_dummies(df['fuel'])
+
+#  Car	|  Fuel  | gas | diesel |
+# ------------------------------
+#   A   |  gas   |  1  |   0    |
+#   B   | diesel |  0  |   1    |
+#   C   |  gas   |  1  |   0    |
+#   D   |  gas   |  1  |   0    |
+
 ____________________________________________________________________________________________________
 BASIC EXPLORING
 
