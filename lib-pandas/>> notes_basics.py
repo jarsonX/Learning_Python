@@ -52,6 +52,8 @@ data = data.replace('?', np.NaN)	#useful because dropna() can remove only NaNs
 data.dropna()
 data.dropna(subset=["ser_2"], axis=0, inplace=True)  #axis=0 drops rows, axis=1 drops cols
 
+data.reset_index(drop=True, inplace=True)  #indices should be resetted after dropping any rows
+
 ser_1.hasnans  				#checks if there are any NaN values
 ser_2.all()  				#checks if all objects have a value assigned
 ser_2.isnull()  			#check nulls
