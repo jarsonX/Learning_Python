@@ -38,8 +38,8 @@ and so on...
 ____________________________________________________________________________________________________
 DATATYPES
 
-data['col1'] = data['col1'].astype(float)	#native Python types
-data['col1'] = data['col1'].astype('int64')	#pandas types
+data['col1'] = data['col1'].astype(float)	
+data['col1'] = data['col1'].astype('int64')	
 
 ____________________________________________________________________________________________________
 CLEANING
