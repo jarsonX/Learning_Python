@@ -71,11 +71,12 @@ ser_4 = ser_1.sub(ser_2)  		#subtracts series
 #simple operations (that apply to each row in a series/col) can be done like this:
 ser_2 = ser_2 + 1
 
-list_1_to_list = list_1.tolist()  		#converts to list
-list_1_to_array = list_1.array  		#converts to numpy's array
-my_df.columns = ['Col1', 'Col2', 'Col3']  	#sets column headers
-my_df.T  					#transpose (switch rows and cols)
-my_df.apply(add,axis=1)  			#apply function to each row
+list_1_to_list = list_1.tolist()  			#converts to list
+list_1_to_array = list_1.array  			#converts to numpy's array
+my_df.columns = ['Col1', 'Col2', 'Col3']  		#sets column headers
+my_df.rename(columns={"old": "new"}, inplace=True)
+my_df.T  						#transpose (switch rows and cols)
+my_df.apply(add,axis=1)  				#apply function to each row
 
 #apply function to each row using lambda
 my_df['new_col'] = df.apply(lambda row : row[0]+row[1]+row[2], axis=1)
