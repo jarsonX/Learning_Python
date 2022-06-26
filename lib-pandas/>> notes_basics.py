@@ -59,6 +59,14 @@ ser_2.isnull()  			#check nulls
 ser_2.interpolate()  			#fills NaNs with averages
 ser_2.fillna()  			#fills with 0s
 
+#Complex missing values check - example
+missing_data = df.isnull()
+
+for column in missing_data.columns.values.tolist():
+    print(column)
+    print (missing_data[column].value_counts())
+    print("") 
+
 ____________________________________________________________________________________________________
 TRANSFORMING
 ser_2.abs()  				#absolute values
