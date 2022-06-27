@@ -35,4 +35,5 @@ class Person:
     self.age = 30
     
 a_person = Person()
-a_person.age = 32      #accessing variables 
+a_person.age = 32               #accessing and modifying variables 
+a_person.name.lastname = 'Y'
