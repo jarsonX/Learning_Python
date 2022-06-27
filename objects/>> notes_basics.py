@@ -13,3 +13,18 @@ created based on the template provided by the class.
 Instance: A single set of values of a particular class. Classes may be comprised of multiple 
 variables; an instance is a set of values for these variables. The term “instance” is often used
 interchangeably with the term “object”.
+
+
+------------------------------------------------------------------------------------DEFINING-CLASSES
+____________________________________________________________________________________________________
+
+class Name:
+  def __init__(self):
+    self.firstname = 'Jarson'
+    self.lastname = 'X'
+    
+class Perons:
+  def __init__(self):
+    self.name = Name()
+    self.eycolor = 'brown'
+    self.age = 30
