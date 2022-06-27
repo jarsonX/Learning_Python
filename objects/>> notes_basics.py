@@ -28,8 +28,11 @@ class Name:
     self.firstname = 'Jarson'
     self.lastname = 'X'
     
-class Perons:
+class Person:
   def __init__(self):
     self.name = Name()
     self.eycolor = 'brown'
     self.age = 30
+    
+a_person = Person()
+print(a_person.age)
