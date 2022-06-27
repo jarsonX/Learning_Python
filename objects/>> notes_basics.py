@@ -35,4 +35,4 @@ class Person:
     self.age = 30
     
 a_person = Person()
-print(a_person.age)
+a_person.age = 32      #accessing variables 
