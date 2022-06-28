@@ -27,9 +27,9 @@ ________________________________________________________________________________
 DEFINING
 
 class Name:
-  def __init__(self):                 #__init__ is a constructor
-    self.firstname = 'Jarson'
-    self.lastname = 'X'
+  def __init__(self, firstname, lastname):               #__init__ is a constructor
+    self.firstname = firstname                           #self.firstname is related to a class level
+    self.lastname = lastname                             #firstname refers to a parameter
     
 class Person:
   def __init__(self):
@@ -37,6 +37,7 @@ class Person:
     self.eycolor = 'brown'
     self.age = 30
     
+a_name = Name('Jarson', 'X')    #Python automatically ignores the self parameter, goes to firstname    
 a_person = Person()
 a_person.age = 32               #accessing and modifying variables 
 a_person.name.lastname = 'Y'
