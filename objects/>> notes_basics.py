@@ -47,5 +47,12 @@ Encapsulation: #The ability to combine variables and methods into class definiti
 
 Method: #A function defined inside of a class.
   
-Scope: #The normal scope of a function, plus any variables that are visible in the instance of the class
-#as a whole.  
+Scope: #The normal scope of a function, plus any variables that are visible in the instance of the 
+#class as a whole.
+
+#Four common method types are: constructors, destructors, getters and setters.
+- Constructor: #specifies some code to run whenever a new instance of the class is created. Often has
+  #parameters that provide values to the variables defined by the class.
+      #Example: if class has a list, the list likely needs to be initialized before it can be used.
+      #This would be done in the constructor.
+-   
