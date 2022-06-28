@@ -30,7 +30,7 @@ class Name:
   def __init__(self, firstname, lastname):               #__init__ is a constructor
     self.firstname = firstname                           #self.firstname is related to a class level
     self.lastname = lastname                             #firstname refers to a parameter
-    
+                                                         #parameters can be keywords of course
 class Person:
   def __init__(self):
     self.name = Name()
