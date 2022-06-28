@@ -18,14 +18,16 @@ Self: #Throughout nearly any Python code, self will be the keyword you see as th
 #in every method in Python classes. However, technically you can use any other word if you want. 
 #Python assigns the object containing the instance variables to the first parameter in the method, 
 #no matter what it's called.
-
+#Preceding any variable with self tells Python that the scope of such variable is the entire 
+#lifespan of the class.
+#Self is always the first parameter for any method defined inside of a class.
 
 ---------------------------------------------------------------------------------------------CLASSES
 ____________________________________________________________________________________________________
 DEFINING
 
 class Name:
-  def __init__(self):
+  def __init__(self):                 #__init__ is a constructor
     self.firstname = 'Jarson'
     self.lastname = 'X'
     
