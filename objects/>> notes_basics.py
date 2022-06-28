@@ -51,6 +51,10 @@ Scope: #The normal scope of a function, plus any variables that are visible in t
 - Setter: #sets a variable contained within the class to a new value. Commonly used to allow other
       #processing to occur whenever the variable is changed (like logging).
 
+#Getters and Setters are considered not in line with 'Pythonic' way of coding, where keeping access
+#to variables easy is a priority. If not needed for their advantages, they are discouraged. Note
+#however, that they are used often in many different languages (like Java).
+    
 ---------------------------------------------------------------------------------------------CLASSES
 ____________________________________________________________________________________________________
 DEFINING
