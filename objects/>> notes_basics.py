@@ -22,25 +22,8 @@ Self: #Throughout nearly any Python code, self will be the keyword you see as th
 #lifespan of the class.
 #Self is always the first parameter for any method defined inside of a class.
 
----------------------------------------------------------------------------------------------CLASSES
-____________________________________________________________________________________________________
-DEFINING
-
-class Name:
-  def __init__(self, firstname, lastname):         #__init__ is a constructor
-    self.firstname = firstname                     #self.firstname is related to a class level
-    self.lastname = lastname                       #firstname refers to a parameter
-                                                   #parameters can be keywords and set as
-class Person:                                      #positional arguments when creating an object,
-  def __init__(self):                              #i.e. new = Name('Jarson') instead of
-    self.name = Name()                             #new = Name(firstname='Jarson')
-    self.eycolor = 'brown'
-    self.age = 30
-    
-a_name = Name('Jarson', 'X')    #Python automatically ignores the self parameter, goes to firstname    
-a_person = Person()
-a_person.age = 32               #accessing and modifying variables 
-a_person.name.lastname = 'Y'
+__xxx__ #double underscore is a convetnion used to inform that we don't want other classes or
+#functions to access that variable or method.
 
 ____________________________________________________________________________________________________
 ENCAPSULATING METHODS IN CLASSES
@@ -67,4 +50,26 @@ Scope: #The normal scope of a function, plus any variables that are visible in t
       #possible when accessing variables directly (not through a method).
 - Setter: #sets a variable contained within the class to a new value. Commonly used to allow other
       #processing to occur whenever the variable is changed (like logging).
+
+---------------------------------------------------------------------------------------------CLASSES
+____________________________________________________________________________________________________
+DEFINING
+
+class Name:
+  def __init__(self, firstname, lastname):         #__init__ is a constructor
+    self.firstname = firstname                     #self.firstname is related to a class level
+    self.lastname = lastname                       #firstname refers to a parameter
+                                                   #parameters can be keywords and set as
+class Person:                                      #positional arguments when creating an object,
+  def __init__(self):                              #i.e. new = Name('Jarson') instead of
+    self.name = Name()                             #new = Name(firstname='Jarson')
+    self.eycolor = 'brown'
+    self.age = 30
+    
+a_name = Name('Jarson', 'X')    #Python automatically ignores the self parameter, goes to firstname    
+a_person = Person()
+a_person.age = 32               #accessing and modifying variables 
+a_person.name.lastname = 'Y'
+
+
      
