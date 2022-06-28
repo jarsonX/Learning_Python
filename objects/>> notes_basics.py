@@ -50,11 +50,18 @@ Method: #A function defined inside of a class.
 Scope: #The normal scope of a function, plus any variables that are visible in the instance of the 
 #class as a whole.
 
-#Four common method types are: constructors, destructors, getters and setters.
+#Four common method types are:
+
 - Constructor: #specifies some code to run whenever a new instance of the class is created. Often has
-  #parameters that provide values to the variables defined by the class.
+      #parameters that provide values to the variables defined by the class.
       #Example: if class has a list, the list likely needs to be initialized before it can be used.
       #This would be done in the constructor.
 - Destructor: #a special method called automatically during the destruction of an object.
       #Example: useful when dealing with massive quantities of data and running out of memory. Allows
       #to free up the memory by destroying instance that are no longer needed.
+- Getter: #returns the value of variable contained within the class. Commonly used to allow other
+      #processing to occur whenever the variable is accessed (like logging), which is usually not
+      #possible when accessing variables directly (not through a method).
+- Setter: #sets a variable contained within the class to a new value. Commonly used to allow other
+      #processing to occur whenever the variable is changed (like logging).
+     
