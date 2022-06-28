@@ -55,4 +55,6 @@ Scope: #The normal scope of a function, plus any variables that are visible in t
   #parameters that provide values to the variables defined by the class.
       #Example: if class has a list, the list likely needs to be initialized before it can be used.
       #This would be done in the constructor.
--   
+- Destructor: #a special method called automatically during the destruction of an object.
+      #Example: useful when dealing with massive quantities of data and running out of memory. Allows
+      #to free up the memory by destroying instance that are no longer needed.
