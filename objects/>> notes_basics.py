@@ -43,4 +43,9 @@ ________________________________________________________________________________
 ENCAPSULATING METHODS IN CLASSES
 
 Encapsulation: #The ability to combine variables and methods into class definitions in object-oriented
-#programming. It helps avoid modification or misuse of data by other functions or programs. 
+#programming. It helps avoid modification or misuse of data by other functions or programs.
+
+Method: #A function defined inside of a class.
+  
+Scope: #The normal scope of a function, plus any variables that are visible in the instance of the class
+#as a whole.  
