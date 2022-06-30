@@ -148,6 +148,16 @@ ser_2.lt(5)  				#checks if all values are less than 5
 					#gt = greater than, le = less or equal, ge = greater or equal
 ser_5 = my_df['Name']  			#retrieve column as a Series
 
+#Setting quartiles
+Q1 = df['Series'].quantile(0.25)
+Q3 = df['Series'].quantile(0.75)
+IQR = Q3 - Q1
+
+#Finding outliers
+df['Series'] < (Q1 - 1.5*IQR)	#it is assumed that low extreme is 1.5 times lower than 1Q
+df['Series'] > (Q3 + 1.5*IQR)	#similarily, upper extreme is 1.5 times higher than 3Q
+				#outliers are even lower/higher than extremes
+
 ____________________________________________________________________________________________________
 MINING
 
