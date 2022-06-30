@@ -122,6 +122,9 @@ my_df.describe()  #ignores NaNs
 my_df.describe(inlcude='all')  #includes non-numeric
 my_df.columns  #headers
 
+my_df.value_counts()  #summarizes categorical data
+my_df['Series'].value_counts().to_frame()  #summarizes categorical data and converts to DataFrame
+
 my_df.at[0, 'Money']  			#retrieve a value
 my_df.loc[0, 'Money']  			#like above ('0' is actually a row's title, not index)
 my_df.iloc[0,2]  			#like above but by indices
