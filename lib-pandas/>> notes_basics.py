@@ -28,8 +28,9 @@ dictionary = {'Name': ['Ala', 'Mala', 'Koczisa', 'Oraza', 'Piesa'], \
 
 my_df = pandas.DataFrame(dictionary)
 
+series.to_frame()  #converts Series to DataFrame
 
-Easy way to create a df:
+#Easy way to create a df:
 
 my_df_2 = pandas.DataFrame()		#empty df
 my_df_2['Column_1'] = my_list
