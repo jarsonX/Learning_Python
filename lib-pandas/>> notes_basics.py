@@ -169,3 +169,21 @@ ser_1.mean()
 ser_1.median()
 ser_1.std()  				#denominator N-1 by default
 ser_1.std(ddof = 2)
+
+#Groupby
+data.groupby()  #group variables by categorical variables
+
+df_test = df[['drive-wheels', 'body-style', 'price]]
+df_grp = df_test.groupby(['drive-wheels', 'body-style'] as index=False).mean()
+	      
+
+#  	|  drive-wheels  | body-style    | avg price |
+# ----------------------------------------------------
+#   0   |  4wd   	 |  convertible  |   x       |
+#   1   |  4wd   	 |  sedan  	 |   x       |
+#   2   |  fwd   	 |  convertible  |   x       |
+#   3   |  rwd   	 |  convertible  |   x	     |	      
+	      
+#Pivot
+df_pivot = df.grp.pivot(index = 'drive-wheels', columns = 'body-style')	      
+			 
