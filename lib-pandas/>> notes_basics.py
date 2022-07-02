@@ -161,6 +161,7 @@ df['Series'] > (Q3 + 1.5*IQR)	#similarily, upper extreme is 1.5 times higher tha
 ____________________________________________________________________________________________________
 MINING
 
+data.corr()				#correlation between all relevant variables (table form)
 ser_1.corr(ser_2)  			#correlation between ser_1 and ser_2
 ser_1.corr(ser_1)  			#autocorrelation
 ser_1.autocorr(lag = 5)  		#autocorrelation with shifted self
