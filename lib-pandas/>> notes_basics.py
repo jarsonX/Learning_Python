@@ -161,6 +161,8 @@ df['Series'] > (Q3 + 1.5*IQR)	#similarily, upper extreme is 1.5 times higher tha
 ____________________________________________________________________________________________________
 MINING
 
+#Note: corr in pandas is Pearson correlation method by default.
+
 data.corr()					#correlation between all relevant variables (table form)
 data.corr[['ser_1', 'ser_2', 'ser_N']].corr()	#correlation between choosen variables (table form) 		
 ser_1.corr('ser_2')  				#correlation between ser_1 and ser_2
