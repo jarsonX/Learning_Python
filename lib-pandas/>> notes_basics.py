@@ -175,7 +175,7 @@ ser_1.std(ddof = 2)
 #Groupby
 data.groupby()  #group variables by categorical variables
 
-df_test = df[['drive-wheels', 'body-style', 'price]]
+df_test = df[['drive-wheels', 'body-style', 'price']]
 df_grp = df_test.groupby(['drive-wheels', 'body-style'] as index=False).mean()
 	      
 
