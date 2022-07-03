@@ -187,7 +187,10 @@ df_grp = df_test.groupby(['drive-wheels', 'body-style'], as_index=False).mean()
 #   1   |  4wd   	 |  sedan  	 |   x       |
 #   2   |  fwd   	 |  convertible  |   x       |
 #   3   |  rwd   	 |  convertible  |   x	     |	      
-	      
+
+#To obtain the values of the particular group from the above:
+group_4wd.get_group('4wd')['price']
+
 #Pivot
 df_pivot = df.grp.pivot(index = 'drive-wheels', columns = 'body-style')	      
 			 
