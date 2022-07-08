@@ -24,7 +24,10 @@ class fraction:
             return self.nom // self.hdivisor, self.denom // self.hdivisor
 
 
-x = fraction(12000,0)     
+x = fraction(5324,63400)     
 
 print(x.hdivisor)
-print(x.reduction())
+print(x.reduction())   
+    
+    
+       
