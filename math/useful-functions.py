@@ -11,7 +11,7 @@ class fraction:
     def hdivisor(self):
         self.hdivisor = 'No common divisor'
       
-        for i in range(max(self.nom, self.denom), 1, -1):
+        for i in range(min(self.nom, self.denom), 1, -1):
             if (self.nom % i == 0) and (self.denom % i == 0):
                 self.hdivisor = i
                 break
