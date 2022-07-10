@@ -51,6 +51,25 @@ lm.intercept_  # view the intercept (b0)
 lm.coef_  # view the coefficients (b1, b2, b3, b4)
 
 
+#------------------------------------------------------------------------------Polynomial-regression
+#___________________________________________________________________________________________________
+
+f = np.polyfit(x, y, 3)  #third order polynomial regression
+p = np.poly1d(f)  #model base
+
+#For PR with order higher than 3 we need to use scikit-learn's preprocessing library
+
+from sklearn.preprocessing import PolynomialFeatures
+pr = PolynomialFeatures(degree=2, include_bias=False)  #degree of 2 used for simplicity
+x_polly = pr.fit_transform(x[['var1', 'var2']])
+
+#Example
+x1, x2 = 1, 2
+pr = PolynomialFeatures(degree=2, include_bias=False)
+pr.fit_transform([[x1, x2]])
+
+#output: x1, x2, x1x2, x1^2, x2^2
+
 #-------------------------------------------------------------------------Regression-plot-in-Seaborn
 #___________________________________________________________________________________________________
 
@@ -60,12 +79,14 @@ plt.figure(figsize = (12, 10))  #figsize = (width, height); optional line
 sns.regplot(x = 'independent_variable', y = 'dependent_variable', data = <dataframe>)
 plt.ylim(0,)
 
+
 #---------------------------------------------------------------------------Residual-plot-in-Seaborn
 #___________________________________________________________________________________________________
 
 import seaborn as sns
 
 sns.residplot(df['independent'], df['dependent'])
+
 
 #-----------------------------------------------------------------------Distribution-plot-in-Seaborn
 #___________________________________________________________________________________________________
