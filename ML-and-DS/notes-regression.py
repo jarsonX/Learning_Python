@@ -70,6 +70,7 @@ pr.fit_transform([[x1, x2]])
 
 #output: x1, x2, x1x2, x1^2, x2^2
 
+
 #-------------------------------------------------------------------------Regression-plot-in-Seaborn
 #___________________________________________________________________________________________________
 
@@ -106,3 +107,12 @@ plt.show()
 plt.close()
 
 
+#--------------------------------------------Normalize-using-preprocessing-library-from-scikit-learn
+#___________________________________________________________________________________________________
+
+from sklearn.preprocessing import StandardScaler
+
+SCALE = StandardScale()
+SCALE.fit(x_data[['var1', 'var2']])
+
+x_scale = SCALE.transform(x_data[['var_1', 'var_2']])  #transforms data into a new dataframe
