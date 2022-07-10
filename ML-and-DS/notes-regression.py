@@ -49,3 +49,39 @@ Yhat = lm.predict(X)
 # Other:
 lm.intercept_  # view the intercept (b0)
 lm.coef_  # view the coefficients (b1, b2, b3, b4)
+
+
+#-------------------------------------------------------------------------Regression-plot-in-Seaborn
+#___________________________________________________________________________________________________
+
+import seaborn as sns
+
+plt.figure(figsize = (12, 10))  #figsize = (width, height); optional line
+sns.regplot(x = 'independent_variable', y = 'dependent_variable', data = <dataframe>)
+plt.ylim(0,)
+
+#---------------------------------------------------------------------------Residual-plot-in-Seaborn
+#___________________________________________________________________________________________________
+
+import seaborn as sns
+
+sns.residplot(df['independent'], df['dependent'])
+
+#-----------------------------------------------------------------------Distribution-plot-in-Seaborn
+#___________________________________________________________________________________________________
+
+import seaborn as sns
+
+plt.figure(figsize = (width, height))
+ax1 = sns.distplot(df['dependent'], hist=False, color='r', label='Actual values')
+sns.distplot(Yhat, hist=False, color='b', label='Fitted values', ax=ax1)
+#of course Yhat needs to be created first
+
+plt.title('title')
+plt.xlabel('label')
+plt.ylabel('label')
+
+plt.show()
+plt.close()
+
+
