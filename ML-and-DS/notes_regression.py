@@ -1,3 +1,4 @@
+#REGRESSION
 
 #---------------------------------------------------------------------------Simple-linear-regression
 #___________________________________________________________________________________________________
@@ -71,6 +72,19 @@ pr.fit_transform([[x1, x2]])
 #output: x1, x2, x1x2, x1^2, x2^2
 
 
+#--------------------------------------------Normalize-using-preprocessing-library-from-scikit-learn
+#___________________________________________________________________________________________________
+
+from sklearn.preprocessing import StandardScaler
+
+SCALE = StandardScale()
+SCALE.fit(x_data[['var1', 'var2']])
+
+x_scale = SCALE.transform(x_data[['var_1', 'var_2']])  #transforms data into a new dataframe
+
+
+#MODEL EVALUATION USING VISUALIZATION
+
 #-------------------------------------------------------------------------Regression-plot-in-Seaborn
 #___________________________________________________________________________________________________
 
@@ -107,12 +121,47 @@ plt.show()
 plt.close()
 
 
-#--------------------------------------------Normalize-using-preprocessing-library-from-scikit-learn
+#------------------------------------------------------------------------------------Polynomial-plot
 #___________________________________________________________________________________________________
 
-from sklearn.preprocessing import StandardScaler
+def PlotPolly(model, independent_variable, dependent_variabble, Name):
+    x_new = np.linspace(15, 55, 100)
+    y_new = model(x_new)
 
-SCALE = StandardScale()
-SCALE.fit(x_data[['var1', 'var2']])
+    plt.plot(independent_variable, dependent_variabble, '.', x_new, y_new, '-')
+    plt.title('Polynomial Fit with Matplotlib for Price ~ Length')
+    ax = plt.gca()
+    ax.set_facecolor((0.898, 0.898, 0.898))
+    fig = plt.gcf()
+    plt.xlabel(Name)
+    plt.ylabel('Price of Cars')
 
-x_scale = SCALE.transform(x_data[['var_1', 'var_2']])  #transforms data into a new dataframe
+    plt.show()
+    plt.close()
+    
+
+#NUMERICAL MODEL EVALUATION
+
+#--------------------------------------------------------------------Generating-a-sequence-of-values
+#___________________________________________________________________________________________________
+
+import numpy as np
+
+new_input = np.arange(1, 101, 1).reshape(-1, 1)  #generating values for a model
+yhat = lm.predict(new_input)
+
+#----------------------------------------------------------------------------------Mean-Square-Error
+#___________________________________________________________________________________________________
+
+from sklearn.metrics import mean_squared_error
+mean_squared_error(df['target'], Yhat)
+
+
+#------------------------------------------------------------------------------------------------R^2
+#___________________________________________________________________________________________________
+
+x = df[['predictor']]  #single predictor or multiple predictors
+y = df['target']]
+
+lm.fit(x, y)
+lm.score(x, y)
