@@ -15,6 +15,13 @@ def factorial(n):
           return n * factorial(n-1)
 
 #recursion_example
+def fibonacci(n):
+     if n == 1 or n == 2:
+          return 1
+     else:
+          return fibonacci(n - 1) + fibonacci(n - 2)
+
+#recursion_example
 def count_down_1(start):
      if start <= 0:
          print(start)
