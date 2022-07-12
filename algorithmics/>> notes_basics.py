@@ -47,6 +47,9 @@ count_down_2(5)
 
 
 #SORTING-ALGORITHMS---------------------------------------------------------------|
+#Algorithms that take as input a list and produce as output a sorted version of
+#that list. Examples include: bubble sort, insertion sort, merge sort, shell sort,
+#quick sort and heap sort.
 
 #bubble_sort_algorithm
 def sort_with_bubbles(lst):
