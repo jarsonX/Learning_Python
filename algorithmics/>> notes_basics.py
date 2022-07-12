@@ -51,7 +51,7 @@ count_down_2(5)
 #that list. Examples include: bubble sort, insertion sort, merge sort, shell sort,
 #quick sort and heap sort.
 
-#bubble_sort_algorithm, O(n^2)
+#Bubble_sort_algorithm, O(n^2)
 def sort_with_bubbles(lst):
     swap_occurred = True
 
@@ -71,3 +71,8 @@ def sort_with_bubbles(lst):
     return lst     
 
 print(sort_with_bubbles([4, 3, 5, 2, 1]))
+
+#Insertion_sort_algorithm
+#Moves one item at a time through the list and puts it in the right location
+#relative to the items that have been alredy sorted.
+
