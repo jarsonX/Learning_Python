@@ -3,7 +3,7 @@
 #that list. Examples include: bubble sort, insertion sort, merge sort, shell sort,
 #quick sort and heap sort.
 
-#Bubble sort, O(n^2)
+#Bubble sort, O(n^2) -------------------------------------------------------------
 def sort_with_bubbles(lst):
     swap_occurred = True
 
@@ -23,7 +23,7 @@ def sort_with_bubbles(lst):
 
 print(sort_with_bubbles([4, 3, 5, 2, 1]))
 
-#Insertion sort, O(n^2)
+#Insertion sort, O(n^2)-----------------------------------------------------------
 #Moves one item at a time through the list and puts it in the right location
 #relative to the items that have been alredy sorted, i.e. compares the item
 #with every previous item in the list (which might be a lot of comparisons).
@@ -46,9 +46,36 @@ def sort_with_select(a_list):
 
 print(sort_with_select([5, 3, 1, 2, 4]))
 
-#Merge sort, n log(n)
-#Breaks the list into individual items, merge two adjacent lists and compares
-#the lowest item in each. Whichever is lower, is added to the new list.
+#Merge sort, n log(n) ------------------------------------------------------------
+def mergesort(lst):
+    if len(lst) <= 1:
+        return lst
+    
+    else:
+        midpoint = len(lst) // 2
+        left = mergesort(lst[:midpoint])
+        right = mergesort(lst[midpoint:])
+
+        newlist = []
+        while len(left) > 0 and len(right) > 0:
+            if left[0] < right[0]:
+                newlist.append(left[0])
+                del left[0]
+            else:
+                newlist.append(right[0])
+                del right[0]
+
+        newlist.extend(left)
+        newlist.extend(right)
+
+        return newlist
+
+print(mergesort([2, 5, 3, 8, 6, 9, 1, 4, 7]))
+
+
+#Merge sort with COMMENTS, n log(n) ----------------------------------------------
+#Breaks the list into individual items, merge two adjacent lists and compares the
+#lowest item in each. Whichever is lower, is added to the new list.
 
 def mergesort(lst):
     
