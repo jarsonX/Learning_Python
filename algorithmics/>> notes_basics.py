@@ -21,7 +21,11 @@ def fibonacci(n):
      else:
           return fibonacci(n - 1) + fibonacci(n - 2)
 
-#recursion_example
+#Head recursion occurs when the recursive call is near the beginning of the function,
+#before other reasoning or code. Tail recursion occurs when the recursive call is
+#closer to the end of the function, after some reasoning or code.
+     
+#tail_recursion_example
 def count_down_1(start):
      if start <= 0:
          print(start)
@@ -31,7 +35,7 @@ def count_down_1(start):
 
 count_down_1(5)
 
-#recursion_example
+#head_recursion_example
 def count_down_2(start):
      if start <= 0:
          print(start)
