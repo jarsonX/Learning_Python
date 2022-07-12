@@ -94,5 +94,8 @@ def sort_with_select(a_list):
 
 print(sort_with_select([5, 3, 1, 2, 4]))
 
+#Merge sort, n log(n)
+#Breaks the list into individual items, merge two adjacent lists and compares
+#the lowest item in each. Whichever is lower, is added to the new list.
 
 
