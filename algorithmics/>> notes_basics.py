@@ -1,16 +1,20 @@
 #BASIC ALGORITHMS
 
-#-----------------------------------------------------------------------------|
-#RECURSION
-
+#RECURSION------------------------------------------------------------------------|
 #A programming method characterized by functions that, during their operation
 #call additional copies of themselves. Recursion involves breaking down a problem
 #into smaller instances recursively until each of them can be independently
 #solved. Solutions to these smaller instances combine to form the solution for
 #the original problem.
 
+#recursion_example
+def factorial(n):
+     if n == 1:
+          return 1
+     else:
+          return n * factorial(n-1)
 
-#recursion_example_____________________________________________________________
+#recursion_example
 def count_down_1(start):
      if start <= 0:
          print(start)
@@ -20,7 +24,7 @@ def count_down_1(start):
 
 count_down_1(5)
 
-#recursion_example_____________________________________________________________
+#recursion_example
 def count_down_2(start):
      if start <= 0:
          print(start)
@@ -31,10 +35,9 @@ def count_down_2(start):
 count_down_2(5)
 
 
-#SORTING ALGORITHMS
+#SORTING-ALGORITHMS---------------------------------------------------------------|
 
-#bubble_sort_algorithm_________________________________________________________
-
+#bubble_sort_algorithm
 def sort_with_bubbles(lst):
     swap_occurred = True
 
