@@ -7,14 +7,14 @@
 #solved. Solutions to these smaller instances combine to form the solution for
 #the original problem.
 
-#recursion_example
+#recursion example
 def factorial(n):
      if n == 1:
           return 1
      else:
           return n * factorial(n-1)
 
-#recursion_example
+#recursion example
 def fibonacci(n):
      if n == 1 or n == 2:
           return 1
@@ -25,7 +25,7 @@ def fibonacci(n):
 #before other reasoning or code. Tail recursion occurs when the recursive call is
 #closer to the end of the function, after some reasoning or code.
      
-#tail_recursion_example
+#tail recursion example
 def count_down_1(start):
      if start <= 0:
          print(start)
@@ -35,7 +35,7 @@ def count_down_1(start):
 
 count_down_1(5)
 
-#head_recursion_example
+#head recursion example
 def count_down_2(start):
      if start <= 0:
          print(start)
@@ -51,7 +51,7 @@ count_down_2(5)
 #that list. Examples include: bubble sort, insertion sort, merge sort, shell sort,
 #quick sort and heap sort.
 
-#Bubble_sort, O(n^2)
+#Bubble sort, O(n^2)
 def sort_with_bubbles(lst):
     swap_occurred = True
 
@@ -71,7 +71,7 @@ def sort_with_bubbles(lst):
 
 print(sort_with_bubbles([4, 3, 5, 2, 1]))
 
-#Insertion_sort, O(n^2)
+#Insertion sort, O(n^2)
 #Moves one item at a time through the list and puts it in the right location
 #relative to the items that have been alredy sorted, i.e. compares the item
 #with every previous item in the list (which might be a lot of comparisons).
