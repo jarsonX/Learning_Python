@@ -73,6 +73,46 @@ def mergesort(lst):
 print(mergesort([2, 5, 3, 8, 6, 9, 1, 4, 7]))
 
 
+#Merge sort with PRINTS, n log(n) ------------------------------------------------
+def mergesort(lst):
+    
+    if len(lst) <= 1:
+        print("Returning one-item list:", lst)
+        return lst
+    else:
+        midpoint = len(lst) // 2
+        
+        unsortedleft = lst[:midpoint]
+        unsortedright = lst[midpoint:]
+        
+        print("Sorting left:", unsortedleft)
+        left = mergesort(lst[:midpoint])
+        print("Left sorted:", left)
+
+        print("Sorting right:", unsortedright)
+        right = mergesort(lst[midpoint:])
+        print("Right sorted:", right)
+
+        print("Merging", left, "and", right)
+        newlist = []
+        
+        while len(left) and len(right) > 0:
+            if left[0] < right[0]:
+                newlist.append(left[0])
+                del left[0]
+            else:
+                newlist.append(right[0])
+                del right[0]
+
+        newlist.extend(left)
+        newlist.extend(right)
+
+        print("Returning merged list:", newlist)
+        return newlist
+
+print(mergesort([2, 5, 3, 8, 6, 9, 1, 4, 7]))
+
+
 #Merge sort with COMMENTS, n log(n) ----------------------------------------------
 #Breaks the list into individual items, merge two adjacent lists and compares the
 #lowest item in each. Whichever is lower, is added to the new list.
