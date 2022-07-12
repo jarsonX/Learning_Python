@@ -25,7 +25,7 @@ print(sort_with_bubbles([4, 3, 5, 2, 1]))
 
 #Insertion sort, O(n^2)-----------------------------------------------------------
 #Moves one item at a time through the list and puts it in the right location
-#relative to the items that have been alredy sorted, i.e. compares the item
+#relative to the items that have been already sorted, i.e. compares the item
 #with every previous item in the list (which might be a lot of comparisons).
 
 def sort_with_select(a_list):
