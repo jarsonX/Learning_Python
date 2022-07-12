@@ -1,5 +1,14 @@
+#BASIC ALGORITHMS
 
+#-----------------------------------------------------------------------------|
 #RECURSION
+
+#A programming method characterized by functions that, during their operation
+#call additional copies of themselves. Recursion involves breaking down a problem
+#into smaller instances recursively until each of them can be independently
+#solved. Solutions to these smaller instances combine to form the solution for
+#the original problem.
+
 
 #recursion_example_____________________________________________________________
 def count_down_1(start):
