@@ -134,7 +134,7 @@ def PlotPolly(model, independent_variable, dependent_variabble, Name):
     ax.set_facecolor((0.898, 0.898, 0.898))
     fig = plt.gcf()
     plt.xlabel(Name)
-    plt.ylabel('Price of Cars')
+    plt.ylabel('label')
 
     plt.show()
     plt.close()
