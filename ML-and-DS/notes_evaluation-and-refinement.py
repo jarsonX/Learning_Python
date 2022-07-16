@@ -15,7 +15,7 @@ x_train, x_test, y_train, y_test = train_test.split(x_data, y_data, test_size=0.
 # test_size - percentage of the data for testing
 # random_state - number generator used for random sampling
 
-#-Cross-validation-score----------------------------------------------------------------------------
+#-Cross-val-score-----------------------------------------------------------------------------------
 
 # Using a lot of data for training gives us an accurate means of determining how well our model will
 # perform in the real world. But the precision of the performance will be low, i.e. results from each
@@ -30,3 +30,29 @@ x_train, x_test, y_train, y_test = train_test.split(x_data, y_data, test_size=0.
 # estimate of out-of-sample error. The evaluation metric depends on the model, e.g. R^2.
 
 # cross_val_score() function performs multiple out-of-sample evaluations.
+
+from sklearn.model_selection import cross_val_score
+
+scores = cross_val_score(lr, x_data, y_data, cv=3)
+
+# lr - the type of model we are using to do the cross validation (here: linear regression)
+# x_data - the predictive variable
+# y_data - the target variable
+# cv - number of partitions
+
+# The function returns an array of scores, one for each partition that was chosen as the testing set.
+# The result can be averaged together to estimate out-of-sample R^2:
+
+np.mean(scores)
+
+#-Cross-val-predict---------------------------------------------------------------------------------
+
+# Provides detailed information in respect of predicted values supplied by the model before R^2
+# values are calculated.
+
+from sklearn.model_selection import cross_val_predict
+yhat = cross_val_predict(lr2e, x_data, y_data, cv=3)
+
+
+
+
