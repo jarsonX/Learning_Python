@@ -18,6 +18,8 @@
 # REPEAT for a larger value of alpha.
 # FINALLY select the value of alpha that maximizes R^2.
 
+# See GRID SEARCH below for efficient method of doing so.
+
 #-Making-prediction-using-ridge-regression-----------------------------------------------------------
 
 from sklearn.linear_model import Ridge
@@ -28,3 +30,32 @@ RidgeModel.fit(X, Y)
 Yhat = RidgeModel.predict(X)
 
 #_GRID_SEARCH_______________________________________________________________________________________
+
+# A time-efficient tuning technique that exhaustively computes the optimum values of hyperparameters.
+
+# 1. Split the dataset into thre parts:
+#     - training set
+#     - validation set
+#     - test set
+# 2. Train the model for different hyperparameters and different values.
+# 3. Use MSE or R^2 for each model.
+# 4. Select the hyperparameters that minimizes MSE or maximizes R^2 on the validation set.
+# 5. Test model performance using the test data.
+
+from sklearn.linear_model import Ridge
+from sklearn.model_selection import GridSearchCV
+
+parameters = [{'alpha': [0.001, 0.1, 1, 10, 100, 1000]}, 'normalize'=[True, False]]
+
+RR = Rdige()
+
+Grid1 = GridSearchCV(RR, parameters, cv=4)  #cv is the number of folds; we use R^2 by default
+Grid1.fit(x_data[['var_1', 'var_2', 'var_3', 'var_4']], y_data)
+Grid1.best_estimator_
+
+scores = Grid1.cv_results_
+scores['mean_test_score']
+
+for param, mean_val, mean_test in zip(scores['params'], scores['mean_test_score'], \
+                                      scores['mean_train_score']):
+  print(param, "R^2 on test data:", mean_val, "R^2 on train data:", mean_test)
