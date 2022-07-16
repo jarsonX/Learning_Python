@@ -1,7 +1,6 @@
-#REGRESSION
+#REGRESSION_________________________________________________________________________________________
 
 #---------------------------------------------------------------------------Simple-linear-regression
-#___________________________________________________________________________________________________
 
 # Refer to one independent variable to make a prediction.
 
@@ -27,7 +26,6 @@ lm.coef_  # view the slope (b1)
 
 
 #-------------------------------------------------------------------------Multiple-linear-regression
-#___________________________________________________________________________________________________
 
 # Refer to several independent variables to make a prediction.
 
@@ -53,7 +51,6 @@ lm.coef_  # view the coefficients (b1, b2, b3, b4)
 
 
 #------------------------------------------------------------------------------Polynomial-regression
-#___________________________________________________________________________________________________
 
 f = np.polyfit(x, y, 3)  #third order polynomial regression
 p = np.poly1d(f)  #model base
@@ -73,7 +70,6 @@ pr.fit_transform([[x1, x2]])
 
 
 #--------------------------------------------Normalize-using-preprocessing-library-from-scikit-learn
-#___________________________________________________________________________________________________
 
 from sklearn.preprocessing import StandardScaler
 
@@ -83,10 +79,10 @@ SCALE.fit(x_data[['var1', 'var2']])
 x_scale = SCALE.transform(x_data[['var_1', 'var_2']])  #transforms data into a new dataframe
 
 
-#MODEL EVALUATION USING VISUALIZATION
+
+#MODEL EVALUATION USING VISUALIZATION_______________________________________________________________
 
 #-------------------------------------------------------------------------Regression-plot-in-Seaborn
-#___________________________________________________________________________________________________
 
 import seaborn as sns
 
@@ -96,7 +92,6 @@ plt.ylim(0,)
 
 
 #---------------------------------------------------------------------------Residual-plot-in-Seaborn
-#___________________________________________________________________________________________________
 
 import seaborn as sns
 
@@ -104,7 +99,6 @@ sns.residplot(df['independent'], df['dependent'])
 
 
 #-----------------------------------------------------------------------Distribution-plot-in-Seaborn
-#___________________________________________________________________________________________________
 
 import seaborn as sns
 
@@ -122,7 +116,6 @@ plt.close()
 
 
 #------------------------------------------------------------------------------------Polynomial-plot
-#___________________________________________________________________________________________________
 
 def PlotPolly(model, independent_variable, dependent_variabble, Name):
     x_new = np.linspace(15, 55, 100)
@@ -139,11 +132,11 @@ def PlotPolly(model, independent_variable, dependent_variabble, Name):
     plt.show()
     plt.close()
     
+    
 
-#NUMERICAL MODEL EVALUATION
+#NUMERICAL MODEL EVALUATION_________________________________________________________________________
 
 #--------------------------------------------------------------------Generating-a-sequence-of-values
-#___________________________________________________________________________________________________
 
 import numpy as np
 
@@ -151,14 +144,12 @@ new_input = np.arange(1, 101, 1).reshape(-1, 1)  #generating values for a model
 yhat = lm.predict(new_input)
 
 #----------------------------------------------------------------------------------Mean-Square-Error
-#___________________________________________________________________________________________________
 
 from sklearn.metrics import mean_squared_error
 mean_squared_error(df['target'], Yhat)
 
 
 #------------------------------------------------------------------------------------------------R^2
-#___________________________________________________________________________________________________
 
 x = df[['predictor']]  #single predictor or multiple predictors
 y = df['target']]
