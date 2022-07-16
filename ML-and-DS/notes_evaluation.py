@@ -70,7 +70,25 @@ y = df['target']]
 lm.fit(x, y)
 lm.score(x, y)
 
+#-R^2-and-polynomial-with-different-orders-----------------------------------------------------------
 
+# Calculates R^2 for different orders allowing to choose the best fit.
+
+Rsqu_test = []
+order = [1, 2, 3, 4]
+
+for n in order:
+    pr = PolynomialFeatures(degree=n)
+    
+    # Transform training and testing data into polynomials
+    x_train_pr = pr.fit_transform(x_train[['var_1']])
+    x_test_pr = pr.fit_transform((x_test[['var_1']])
+                                 
+    lr.fit(x_train_pr, y_train)  # fit the regression model
+    
+    Rsqu_test.append(lr.score(x_test_pr, y_test))  # calculate R^2 and store it                                 
+
+                                 
 #_ADVANCED_MODEL_EVALUATION_________________________________________________________________________
 
 #-Training-testing-sets-----------------------------------------------------------------------------
