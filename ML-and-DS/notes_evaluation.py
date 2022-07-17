@@ -124,7 +124,7 @@ x_train, x_test, y_train, y_test = train_test.split(x_data, y_data, test_size=0.
 
 from sklearn.model_selection import cross_val_score
 
-scores = cross_val_score(lr, x_data, y_data, cv=3)
+scores = cross_val_score(lr, x_data, y_data, cv=3)  #'scoring' is optional (default R^2)
 
 # lr - the type of model we are using to do the cross validation (here: linear regression)
 # x_data - the predictive variable
