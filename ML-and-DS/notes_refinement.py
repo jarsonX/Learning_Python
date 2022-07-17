@@ -25,7 +25,8 @@
 from sklearn.linear_model import Ridge
 
 RidgeModel = Ridge(alpha=0.1)
-RidgeModel.fit(X, Y)
+RidgeModel.fit(x_train, y_train)  # subsets need to be created with train_test_split() first
+RidgeModel.score(x_test, y_test)  # calculate R^2
 
 Yhat = RidgeModel.predict(X)
 
