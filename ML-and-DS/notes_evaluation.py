@@ -87,7 +87,15 @@ for n in order:
                                  
     lr.fit(x_train_pr, y_train)  # fit the regression model
     
-    Rsqu_test.append(lr.score(x_test_pr, y_test))  # calculate R^2 and store it                                 
+    Rsqu_test.append(lr.score(x_test_pr, y_test))  # calculate R^2 and store it                             
+
+# It is helpful to plot it:
+
+plt.plot(order, Rsqu_test)
+plt.xlabel('order')
+plt.ylabel('R^2')
+plt.title('R^2 using test data')
+plt.text(3, 0.75, 'Maximum R^2')                                 
 
                                  
 #_ADVANCED_MODEL_EVALUATION_________________________________________________________________________
