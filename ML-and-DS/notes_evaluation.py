@@ -20,6 +20,7 @@ import seaborn as sns
 
 plt.figure(figsize = (width, height))
 ax1 = sns.distplot(df['dependent'], hist=False, color='r', label='Actual values')
+#ax2 = ... [optional]
 sns.distplot(Yhat, hist=False, color='b', label='Fitted values', ax=ax1)
 #of course Yhat needs to be created first
 
