@@ -28,10 +28,9 @@ def sort_with_bubbles(lst):
 
 print(sort_with_bubbles([4, 3, 5, 2, 1]))
 
-#Insertion sort, O(n^2)-----------------------------------------------------------
-#Moves one item at a time through the list and puts it in the right location
-#relative to the items that have been already sorted, i.e. compares the item
-#with every previous item in the list (which might be a lot of comparisons).
+#Selection sort, O(n^2)-----------------------------------------------------------
+#Goes through the list, finds the lowest of the first item and moves it to the
+#beginning. It then repeats the process, starting at the second item.
 
 def sort_with_select(a_list):
     
