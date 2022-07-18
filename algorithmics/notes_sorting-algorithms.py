@@ -22,7 +22,7 @@ def sort_with_bubbles(lst):
     return lst
 
 #Note: after each iteration, the highest unsorted number should be moved to its
-#appropriate posistion.
+#appropriate posistion. There might be mulitple swaps during a single iteration.
 
 print(sort_with_bubbles([4, 3, 5, 2, 1]))
 
