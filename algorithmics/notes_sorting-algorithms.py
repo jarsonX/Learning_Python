@@ -4,6 +4,8 @@
 #quick sort and heap sort.
 
 #Bubble sort, O(n^2) -------------------------------------------------------------
+#Compares each n and n+1 element and move them during a single iteration.
+
 def sort_with_bubbles(lst):
     swap_occurred = True
 
