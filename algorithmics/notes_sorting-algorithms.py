@@ -19,7 +19,10 @@ def sort_with_bubbles(lst):
 
                 swap_occurred = True
 
-    return lst     
+    return lst
+
+#Note: after each iteration, the highest unsorted number should be moved to its
+#appropriate posistion.
 
 print(sort_with_bubbles([4, 3, 5, 2, 1]))
 
