@@ -13,7 +13,7 @@ def sort_with_bubbles(lst):
 
         for i in range(len(lst) - 1):
             if lst[i] > lst[i + 1]:                
-                temp = lst[i]           #just hold my lst[i], for a second!
+                temp = lst[i]           #just hold my lst[i] for a second!
                 lst[i] = lst[i + 1]
                 lst[i + 1] = temp
 
