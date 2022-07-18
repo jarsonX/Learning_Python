@@ -43,9 +43,9 @@ def sort_with_select(a_list):
             if a_list[j] < a_list[minIndex]:
                 minIndex = j
 
-        minValue = a_list[minIndex]
-        del a_list[minIndex]
-        a_list.insert(i, minValue)
+        minValue = a_list[minIndex]  #just hold a_list[minIndex] for a second,
+        del a_list[minIndex]         #until I delete it from its position
+        a_list.insert(i, minValue)   #and insert at the correct one!
     
     return a_list
 
