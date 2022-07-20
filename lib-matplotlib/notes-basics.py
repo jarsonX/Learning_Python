@@ -14,6 +14,7 @@ easy to use.
 print(plt.style.available)
 mpl.style.use(['ggplot'])
 
+
 #--PLOT-FUNCTION-----------------------------------------------------------------------------------#
 
 # Enables to create almost all of the conventional visualizations.
@@ -32,6 +33,19 @@ import matplotlib.pyplot as plt
 # However, _inline backend keeps us from modifying graph once it is created and shown. To overcome
 # this, we can use %matplotlib_notebook backend instead. Then, when a function is called, it checks
 # if an active figure already exist and apply any effects to it.
+
+# Kind parameter
+df.plot(kind='...')
+
+# bar for vertical bar plots
+# barh for horizontal bar plots
+# hist for histogram
+# box for boxplot
+# kde or density for density plots
+# area for area plots
+# pie for pie plots
+# scatter for scatter plots
+# hexbin for hexbin plot
 
 
 #--PANDAS------------------------------------------------------------------------------------------#
