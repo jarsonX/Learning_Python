@@ -1,4 +1,4 @@
-#-MATPLOTLIB-FOR---------------------------------------------------------------------------------------#
+#-MATPLOTLIB-FOR-DATA-VISUALIZATION----------------------------------------------------------------#
 
 '''
 Matplotlib has 3 layers: scripting, artist and backend. For the most cases in data analysis, we're
