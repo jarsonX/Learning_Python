@@ -101,7 +101,8 @@ tag_string = tag_child.string  #'Lebron James'
 ###############################################################################
 #Looks through a tag’s descendants and retrieves all that match filters.
 
-#Syntax: find_all(name, attrs, recursive, string, limit, **kwargs)
+#Syntax: bs_object.find_all(name, attrs, recursive, string, limit, **kwargs)
+#Note: there is also bs_object.find() method.
 
 '''HTML Example 2
 %%html
