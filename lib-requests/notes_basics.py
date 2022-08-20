@@ -8,6 +8,7 @@ import requests
 url = 'https://www.ibm.com/'
 
 r = requests.get(url)
+r = requests.get(url).text  #get the contents as text
 r.status_code
 r.request.headers
 r.request.body
