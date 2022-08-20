@@ -133,8 +133,9 @@ my_df.ndim  				#number of dimensions
 my_df.size 				#number of attributes*elements (cols*rows)
 my_df.head(2)  				#first 2 (default = 5)
 my_df.tail(2)  				#last 2 (defaul = 5)
+my_df.dtypes  				#checks types of all columns
+my_df.column.dtype			#checks the type of a single column
 ser_1.index  				#range of values
-ser_1.dtypes  				#checks type
 ser_1.size  				#counts objects
 ser_1.count()  				#counts objects, ignoring missing values
 ser_1.name  				#column name
