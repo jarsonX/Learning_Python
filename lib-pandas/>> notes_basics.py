@@ -202,5 +202,12 @@ df_grp = df_test.groupby(['drive-wheels', 'body-style'], as_index=False).mean()
 group_4wd.get_group('4wd')['price']
 
 #Pivot
-df_pivot = df.grp.pivot(index = 'drive-wheels', columns = 'body-style')	      
-			 
+df_pivot = df.grp.pivot(index = 'drive-wheels', columns = 'body-style')
+
+#Filtering
+
+#Example 1
+df[df['Gender'] == 'Woman'].ConvertedComp.median()
+
+#Example 2
+mean_I_coll_1 = round(df[df['Group'] == 'I']['Colloquium_1'].mean(),2)
