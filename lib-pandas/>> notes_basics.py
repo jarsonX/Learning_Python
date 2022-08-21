@@ -131,6 +131,7 @@ my_df.describe(inlcude='all')  #includes non-numeric
 my_df.columns  #headers
 
 my_df.value_counts()  #summarizes categorical data
+my_df.value_counts()['Specific value']
 my_df['Series'].value_counts().to_frame()  #summarizes categorical data and converts to DataFrame
 
 my_df.at[0, 'Money']  			#retrieve a value
