@@ -62,13 +62,21 @@ ser_2.isnull()  			#check nulls
 ser_2.interpolate()  			#fills NaNs with averages
 ser_2.fillna()  			#fills with 0s
 
-#Complex missing values check - example
+#Complex missing values check - example 1
 missing_data = df.isnull()
 
 for column in missing_data.columns.values.tolist():
     print(column)
     print (missing_data[column].value_counts())
     print("") 
+
+#Complex missing values check - example 2
+for col in missing_data.columns:
+	
+    sum_missings = df[col].isna().sum()
+    
+	if  sum_missings > 0:
+        print(sum_missings, '\t', str(col))
 
 ____________________________________________________________________________________________________
 TRANSFORMING
