@@ -11,6 +11,8 @@ LOADING AND SAVING DATA
 # data_1 = pandas.read_csv('data.csv')		keyword parameter header is True by default,
 # data_2 = pandas.read_json('data.json')	can be changed to 'None' which will cause
 # data_3 = pandas.read_pickle('data.bin')	headers to be displayed as integers (col nums)
+# data 4 = pandas.read_sql_query(QUERY, conn)	assuming the have a connection established with
+#						sqlite3					
 
 # data.to_csv('data.csv')			keyword parameter index is True by default,
 # data.to_json('data.json')			can be changed to False which will cause index
