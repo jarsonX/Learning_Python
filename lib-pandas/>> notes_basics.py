@@ -127,7 +127,7 @@ pd.get_dummies(df['fuel'])
 ____________________________________________________________________________________________________
 BASIC EXPLORING
 
-my_df.info()  #top and last 30 rows 
+my_df.info()  #summary of a DataFrame
 my_df.describe()  #ignores NaNs
 my_df.describe(inlcude='all')  #includes non-numeric
 my_df.columns  #headers
